@@ -14,7 +14,6 @@ a:hover{
 
 @media screen and (min-width: 375px) {
   body {
-    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,14 +27,14 @@ a:hover{
     gap: .2rem;
     align-items: center;
     justify-content: center;
-    margin-top: 1.9rem;
-    padding: 1rem 1.5em;
+    margin-top: 6rem;
+    padding: 1rem .5em;
     box-shadow: 1px 0px 4px 0px #000;
   }
 
   .output {
     height: 6rem;
-    width: 25rem;
+    width: 22rem;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -61,7 +60,8 @@ a:hover{
 
   .row-5{
     align-self: flex-start;
-    margin-bottom: -50px;
+    position: relative;
+    bottom: 34px;
   }
 
   button {
@@ -70,7 +70,7 @@ a:hover{
     font-weight: 550;
     border: .5px solid #4444;
     border-radius: 5px;
-    padding: 2rem 3rem;
+    padding: 1rem 2.6rem;
     width: 2rem;
     transition: .5s;
   }
@@ -82,7 +82,7 @@ a:hover{
   }
   
   .zero, .decimal{
-    padding: 2rem 4.6rem;
+    padding: 1rem 4rem;
   }
 
   .clear{
@@ -91,10 +91,10 @@ a:hover{
   }
   
   .clear, .equal{
-    height: 5.875rem;
-    padding: 2rem 4.6rem;
+    height: 3.875rem;
+    padding: 1rem 4rem;
     position: relative;
-    top: -3rem;
+    /* top: -3rem; */
   }
 
   .equal, .plus{
@@ -113,8 +113,8 @@ a:hover{
 
   .plus{
     position: relative;
-    top: -6.1rem;
-    height: 12rem;
+    top: -2rem;
+    height: 8rem;
   }
 
   .clear:hover{
@@ -125,7 +125,125 @@ a:hover{
   .footer{
     font-size: 0.8rem;
     text-align: center;
-    margin-top: -10px;
     color: #000;
+    margin-top: -1.6rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 247, 247);
+  }
+
+  .calculator-container {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+    padding: 1rem .5em;
+    box-shadow: 1px 0px 4px 0px #000;
+  }
+
+  .output {
+    height: 6rem;
+    width: 22rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    word-break: break-all;
+    border: 0.5px solid #4444;
+    cursor: text;
+    font-size: 2.5rem;
+  }
+
+  .row-1,
+  .row-2,
+  .row-3,
+  .row-4{
+    display: flex;
+    gap: .2rem;
+  }
+
+  .row-4{
+    align-self: flex-start;
+  }
+
+  .row-5{
+    align-self: flex-start;
+    position: relative;
+    bottom: 34px;
+  }
+
+  button {
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 550;
+    border: .5px solid #4444;
+    border-radius: 5px;
+    padding: 1rem 2.6rem;
+    width: 2rem;
+    transition: .5s;
+  }
+
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.267);
+    color: #000;
+    border: 1px solid #000;
+  }
+  
+  .zero, .decimal{
+    padding: 1rem 4rem;
+  }
+
+  .clear{
+    background-color: rgb(199, 47, 47);
+    color: white;
+  }
+  
+  .clear, .equal{
+    height: 3.875rem;
+    padding: 1rem 4rem;
+    position: relative;
+    /* top: -3rem; */
+  }
+
+  .equal, .plus{
+    margin-left: .2rem;
+  }
+
+  .equal{
+    background-color: rgb(32, 121, 32);
+    color: #fff;
+  }
+
+  .equal:hover{
+    background-color: rgb(2, 58, 2);
+    color: #fff;
+  }
+
+  .plus{
+    position: relative;
+    top: -2rem;
+    height: 8rem;
+  }
+
+  .clear:hover{
+    background-color: #000;
+    color: #fff;
+  }
+
+  .footer{
+    font-size: 0.8rem;
+    text-align: center;
+    color: #000;
+    margin-top: -1.6rem;
   }
 }
