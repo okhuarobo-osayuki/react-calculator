@@ -1,7 +1,6 @@
-# Frontend Mentor - QR code component solution
+# AltSchool Challenge
 
-This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-
+This is a solution to the [AltSchool Africa](https://www.altschoolafrica.com/) challenge of building a simple calculator app with React.
 ## Table of contents
 
 - [Overview](#overview)
@@ -18,13 +17,12 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Screenshot
 
-![Desktop](/images/desktop%20screen.png)
-![Mobile](/images/mobile%20screen.png)
+![Desktop](/src/calculator.png)
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/okhuarobo-osayuki/QR-code-component)
-- Live Site URL: [Live Site](https://qr-code-task.netlify.app/)
+- Solution URL: [GitHub](https://github.com/okhuarobo-osayuki/react-calculator)
+- Live Site URL: [Live Site](https://react-calculator-one-xi.vercel.app/)
 
 ## My process
 
@@ -34,32 +32,37 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
 
 ### What I learned
 
-On this project, i understood more on using CSS variables to increase work speed. See examples below:
+On this project, I understood more on how to use the useState hook. See examples below:
 
-```css
-:root {
-  --grey-background-color: hsl(212, 45%, 89%);
-  --white-background-color: hsl(0, 0%, 100%);
-  --paragraph-font: 15px;
-  --pry-font-family: "Outfit", sans-serif;
-}
+```React
+const [data, setData] = useState("0");
+```
+
+```React
+const handleOperator = (e) => {
+    if (data === "0") {
+      return data;
+    } else if (data !== "0") {
+      return setData(data + e.target.value);
+    }
+  };
 ```
 
 ### Continued development
 
-I would love to imporve on my knowledge of media queries; especially writing less media query codes.
+I would love to imporve on my knowledge of Props, useEffect, and more on mathematical functions.
 
 ### Useful resources
 
-- [How to Set Width Ranges for Your CSS Media Queries by FreeCodeCamp](https://www.freecodecamp.org/news/media-queries-width-ranges/) - This helped me to understand better how use width ranges in media queries.
-- [Git Cheat Sheet by SamCollett](https://cheatography.com/samcollett/cheat-sheets/git/) - This contains important information on using git.
+- [Build a Calculator with React JS By tommykelly100](https://www.youtube.com/watch?v=6PC_hz5TMYY)
+- [The Perfect Beginner React Project By Web Dev Simplified](https://www.youtube.com/watch?v=DgRrrOt0Vr8&t=5s)
 
 ## Author
 
 - Website - [Osayuki](https://github.com/okhuarobo-osayuki)
-- Frontend Mentor - [@okhuarobo-osayuki](https://www.frontendmentor.io/profile/okhuarobo-osayuki)
 - Twitter - [@osayuki__](https://twitter.com/osayuki__)
 - LinkedIn - [@osayukiokhuarobo](https://www.linkedin.com/in/osayukiokhuarobo/)
