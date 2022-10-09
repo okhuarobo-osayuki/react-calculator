@@ -20,12 +20,6 @@ function App() {
     setData("0");
   };
 
-  // handle delete button
-  // const del = (e) => {
-  //   e.preventDefault();
-  //   setData((data) => (data.length > 1 ? data.slice(0, -1) : "0"));
-  // };
-
   //handle equal button
   const equal = (e) => {
     e.preventDefault();
