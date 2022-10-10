@@ -25,9 +25,7 @@ function App() {
     e.preventDefault();
     setData(
       // eslint-disable-next-line no-eval
-      String(eval(data)).length > 3 && String(eval(data)).includes(".")
-        ? String(eval(data).toFixed(3))
-        : String(eval(data))
+      String(eval(data)).length > 3 && String(eval(data)).includes(".") ? String(eval(data).toFixed(3)) : String(eval(data))
     );
   };
 
@@ -41,18 +39,11 @@ function App() {
       setData(e.target.value);
     } else if (data.includes(".") && e.target.value === ".") {
       return data;
-    } else if (data.includes("+") && e.target.value === "+") {
-      return data;
-    } else if (data.includes("-") && e.target.value === "-") {
-      return data;
-    } else if (data.includes("*") && e.target.value === "*") {
-      return data;
-    } else if (data.includes("/") && e.target.value === "/") {
-      return data;
     } else {
       setData(data + e.target.value);
     }
   };
+  
 
   return (
     <>
