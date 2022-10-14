@@ -1,10 +1,10 @@
 # AltSchool Challenge
 
 This is a solution to the [AltSchool Africa](https://www.altschoolafrica.com/) challenge of building a simple calculator app with React.
+
 ## Table of contents
 
 - [Overview](#overview)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -14,10 +14,6 @@ This is a solution to the [AltSchool Africa](https://www.altschoolafrica.com/) c
 - [Author](#author)
 
 ## Overview
-
-### Screenshot
-
-![Desktop](/src/calculator.png)
 
 ### Links
 
@@ -39,16 +35,28 @@ This is a solution to the [AltSchool Africa](https://www.altschoolafrica.com/) c
 On this project, I understood more on how to use the useState hook. See examples below:
 
 ```React
-const [data, setData] = useState("0");
+  const [prevState, setPrevState] = useState("");
+  const [currentState, setCurrentState] = useState("");
+  const [num, setNum] = useState("");
+  const [operator, setOperator] = useState(null);
+  const [total, setTotal] = useState(false);
+
 ```
 
 ```React
-const handleOperator = (e) => {
-    if (data === "0") {
-      return data;
-    } else if (data !== "0") {
-      return setData(data + e.target.value);
+  const inputNum = (e) => {
+    if (currentState.includes(".") && e.target.innerText === ".") return;
+    if (currentState === "0" && e.target.innerText === "0") return currentState;
+    if (currentState === "" && e.target.innerText === ".") return currentState;
+
+    if (total) {
+      setPrevState("");
     }
+
+    currentState
+      ? setCurrentState((pre) => pre + e.target.innerText)
+      : setCurrentState(e.target.innerText);
+    setTotal(false);
   };
 ```
 
@@ -64,5 +72,5 @@ I would love to imporve on my knowledge of Props, useEffect, and more on mathema
 ## Author
 
 - Website - [Osayuki](https://github.com/okhuarobo-osayuki)
-- Twitter - [@osayuki__](https://twitter.com/osayuki__)
+- Twitter - [@osayuki\_\_](https://twitter.com/osayuki__)
 - LinkedIn - [@osayukiokhuarobo](https://www.linkedin.com/in/osayukiokhuarobo/)
